@@ -1,0 +1,12 @@
+{
+    "name": "agamenon/miniframework",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "MF\\":"vendor/MF/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}
