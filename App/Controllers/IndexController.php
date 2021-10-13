@@ -3,15 +3,10 @@
 namespace App\Controllers;
 
 use stdClass;
+use MF\Controller\Action;
 
-class indexController{
-
-    private $view;
-
-    public function __construct()
-    {
-       $this->view = new \stdClass(); // cria um objeto vazio p/ criar atribuitos dentro das views 
-    }
+class indexController extends Action{
+    
 
     public function index(){
         //isolando a camada view
@@ -24,13 +19,7 @@ class indexController{
         $this->render('sobreNos');
     }
 
-    public function render($view){
-        echo $classeAtual = get_class($this);
-        $classeAtual = str_replace("App\\Controllers\\", "",$classeAtual);
-        $classeAtual = strtolower(str_replace("Controller", "",$classeAtual));
-        echo "<hr>";      
-        require_once("../App/Views/".$classeAtual."/".$view.".phtml.");
-    }
+    
 }
 
 
