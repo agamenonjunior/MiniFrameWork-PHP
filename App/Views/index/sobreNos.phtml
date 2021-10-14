@@ -1,13 +1,32 @@
-<h1>Index</h1>
+<h1>Página Sobre Nós</h1>
 
 <?php
-
-use App\Models\Produto;
-
 foreach ($this->view->dados as $key => $informacoes) {
+?>
+    
+    <h1> <?= $informacoes['titulo'] ?></h1>
+    <br/>
+    <p> > <?= $informacoes['descricao'] ?></p>
+    <hr>
+<?php 
+}
+?>
+
+    
+
+
+
+
+
+
+<?php
+/*
+foreach ($this->view->dados as $key => $informacoes) {
+    echo"<hr>";
     echo $informacoes['titulo']." - ".$informacoes['descricao'];
     echo"<br>";
+    echo"<hr>";
 }
-echo " página index";
+*/
 
 ?>
