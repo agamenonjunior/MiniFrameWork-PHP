@@ -1,5 +1,13 @@
 <h1>Index</h1>
+
 <?php
-echo "página Sobre Nós";   
+
+use App\Models\Produto;
+
+foreach ($this->view->dados as $key => $informacoes) {
+    echo $informacoes['titulo']." - ".$informacoes['descricao'];
+    echo"<br>";
+}
+echo " página index";
 
 ?>
